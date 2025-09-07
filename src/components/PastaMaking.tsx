@@ -120,7 +120,12 @@ const PastaMaking = () => {
       </section>
 
       <footer className="container mx-auto px-4 text-center py-16">
-  <Link to="/request-quote" className="inline-block px-8 py-4 bg-primary text-background font-bold rounded-full shadow hover:bg-sage transition">Reserve Your Spot</Link>
+        <Link to="/request-quote" className="inline-block px-8 py-4 bg-primary text-background font-bold rounded-full shadow hover:bg-sage transition">Reserve Your Spot</Link>
+        <div className="mt-8">
+          <Link to="/about" className="inline-block px-8 py-4 bg-gradient-to-r from-golden to-sage text-background font-bold rounded-full shadow hover:scale-105 transition">
+            Explore My Services
+          </Link>
+        </div>
       </footer>
     </main>
   );

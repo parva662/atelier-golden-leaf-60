@@ -25,14 +25,14 @@ const Footer = () => {
                   <li><a href="/pasta-making/family-workshop" className="block px-4 py-2 hover:bg-primary/10 rounded transition-colors">Family Pasta Workshop</a></li>
                 </ul>
               </li>
-              <li><a href="#events" className="hover:text-primary transition-colors">Culinary Events</a></li>
+              <li><a href="/events" className="hover:text-primary transition-colors">Culinary Events</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold text-lg mb-4">Connect</h3>
             <ul className="space-y-2 text-cream/80">
-              <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="/contact" className="hover:text-primary transition-colors">Contact</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Instagram</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Newsletter</a></li>
             </ul>

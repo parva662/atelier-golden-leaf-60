@@ -2,10 +2,10 @@ import Header from "@/components/Header";
 import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import ClassicItalian from "../ClassicItalian";
+import ClassicItalian from "../../components/PastaMaking/ClassicItalian";
 
 
-const RegionalAdventurePage = () => {
+const ClassicItalianPage = () => {
   return (
     <div className="min-h-screen">
       <Header />
@@ -17,4 +17,4 @@ const RegionalAdventurePage = () => {
   );
 };
 
-export default RegionalAdventurePage;
+export default ClassicItalianPage;

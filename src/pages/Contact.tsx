@@ -1,15 +1,15 @@
+
 import Header from "@/components/Header";
 import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import RegionalAdventure from "@/components/PastaMaking/RegionalAdventure";
 
 
-const RegionalAdventurePage = () => {
+const ContactPage = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <RegionalAdventure />
+      <Contact />
       <Services />
       <Contact />
       <Footer />
@@ -17,4 +17,4 @@ const RegionalAdventurePage = () => {
   );
 };
 
-export default RegionalAdventurePage;
+export default ContactPage;

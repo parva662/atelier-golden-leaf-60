@@ -10,9 +10,12 @@ import ArtisinalPage from "./pages/Artisinal";
 import PastaMakingPage from "./pages/PastaMaking";
 import RequestQuotePage from "./pages/RequestQuote";
 import NotFound from "./pages/NotFound";
-import ClassicItalian from "./pages/PastaMaking/ClassicItalian";
-import RegionalAdventure from "./pages/PastaMaking/RegionalAdventure";
-import FamilyWorkshop from "./pages/FamilyWorkshop";
+import EventsPage from "./pages/Events";
+import RegionalAdventurePage from "./pages/PastaMaking/RegionalAdventure";
+import FamilyWorkshopPage from "./pages/PastaMaking/FamilyWorkshop";
+import ClassicItalianPage from "./pages/PastaMaking/ClassicItalian";
+import ContactPage from "./pages/Contact";
+import AboutPage from "./pages/About";
 
 const queryClient = new QueryClient();
 
@@ -25,12 +28,15 @@ const App = () => (
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/artisinal" element={<ArtisinalPage />} />
             <Route path="/pasta-making" element={<PastaMakingPage />} />
-            <Route path="/pasta-making/classic-italian" element={<ClassicItalian />} />
-            <Route path="/pasta-making/regional-adventure" element={<RegionalAdventure />} />
-            <Route path="/pasta-making/family-workshop" element={<FamilyWorkshop />} />
+            <Route path="/events" element={<EventsPage />} />
+            <Route path="/pasta-making/classic-italian" element={<ClassicItalianPage />} />
+            <Route path="/pasta-making/regional-adventure" element={<RegionalAdventurePage />} />
+            <Route path="/pasta-making/family-workshop" element={<FamilyWorkshopPage />} />
             <Route path="/request-quote" element={<RequestQuotePage />} />
+            <Route path="/contact" element={<ContactPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

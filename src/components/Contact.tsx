@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-background">
+    <main className="py-20 bg-background min-h-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -41,14 +41,12 @@ const Contact = () => {
                     <Input id="last-name" placeholder="Your last name" />
                   </div>
                 </div>
-                
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                     Email
                   </label>
                   <Input id="email" type="email" placeholder="your.email@example.com" />
                 </div>
-                
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">
                     Service Interest
@@ -61,86 +59,45 @@ const Contact = () => {
                     <option value="catering">Artisanal Catering</option>
                     <option value="pasta">Pasta Making Classes</option>
                     <option value="events">Culinary Events</option>
-                    <option value="other">Other</option>
                   </select>
                 </div>
-                
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                     Message
                   </label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Tell me about your event, dietary preferences, or any questions you have..."
-                    rows={4}
-                  />
+                  <Textarea id="message" rows={4} placeholder="Tell me about your event, class, or request..." />
                 </div>
-                
-                <Button className="w-full bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground">
+                <Button type="submit" className="w-full bg-primary text-background font-bold rounded-full shadow hover:bg-sage transition">
                   Send Message
                 </Button>
               </form>
             </CardContent>
           </Card>
-
-          <div className="space-y-8">
-            <Card className="border-border/50">
-              <CardHeader>
-                <CardTitle className="text-xl text-foreground">Contact Information</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">info@butterflybitescaterings.nl</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">Berkeley, California</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border/50">
-              <CardHeader>
-                <CardTitle className="text-xl text-foreground">Follow My Journey</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex space-x-4 mb-4">
-                  <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-golden to-sage text-foreground hover:opacity-80 transition-opacity">
-                    <Instagram className="w-5 h-5" />
-                  </a>
-                  <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-golden to-sage text-foreground hover:opacity-80 transition-opacity">
-                    <Facebook className="w-5 h-5" />
-                  </a>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  Follow along for daily kitchen adventures, seasonal recipes, and behind-the-scenes moments from my culinary world.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border/50 bg-gradient-to-br from-cream to-card">
-              <CardContent className="pt-6">
-                <h3 className="font-semibold text-foreground mb-2">Newsletter</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Join my monthly newsletter for seasonal recipes, cooking tips, and first access to new classes.
-                </p>
-                <div className="flex space-x-2">
-                  <Input placeholder="Your email" className="flex-1" />
-                  <Button size="sm" className="bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground">
-                    Subscribe
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="flex flex-col justify-center space-y-8">
+            <div className="flex items-center space-x-4">
+              <Mail className="w-6 h-6 text-primary" />
+              <span className="text-lg text-foreground">ibrahim@butterflybites.com</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Phone className="w-6 h-6 text-primary" />
+              <span className="text-lg text-foreground">(555) 123-4567</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <MapPin className="w-6 h-6 text-primary" />
+              <span className="text-lg text-foreground">San Francisco, CA</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Instagram className="w-6 h-6 text-primary" />
+              <a href="https://instagram.com/butterflybites" className="text-lg text-primary hover:underline">@butterflybites</a>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Facebook className="w-6 h-6 text-primary" />
+              <a href="https://facebook.com/butterflybites" className="text-lg text-primary hover:underline">Butterfly Bites</a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 

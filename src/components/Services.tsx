@@ -113,9 +113,12 @@ const Services = () => {
                   </div>
                 )}
                 {service.id === "events" && (
-                  <Button className="w-full bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground">
+                  <Link
+                    to="/events"
+                    className="w-full block bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground text-center px-4 py-2 rounded-md font-medium transition"
+                  >
                     Learn More
-                  </Button>
+                  </Link>
                 )}
               </CardContent>
             </Card>

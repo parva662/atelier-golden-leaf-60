@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import chefPortrait from "@/assets/chef-portrait.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -17,12 +18,17 @@ const Hero = () => {
               Welcome to Butterfly Bites! What started as Sunday dinners for friends has grown into a passion for sharing the art of handmade cuisine. Every dish tells a story, every recipe carries tradition, and every meal brings people together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground font-medium">
+              <Link
+                to="/about"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-golden to-sage text-foreground font-medium rounded-md shadow hover:scale-105 transition"
+              >
                 Explore My Services
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Watch My Story
-              </Button>
+              </Link>
+              <Link to="/about">
+                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                  Watch My Story
+                </Button>
+              </Link>
             </div>
           </div>
           
