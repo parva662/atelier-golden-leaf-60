@@ -17,7 +17,14 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Services</h3>
             <ul className="space-y-2 text-cream/80">
               <li><a href="#catering" className="hover:text-primary transition-colors">Artisanal Catering</a></li>
-              <li><a href="#pasta" className="hover:text-primary transition-colors">Pasta Making Classes</a></li>
+              <li className="group relative">
+                <a href="/pasta-making" className="hover:text-primary transition-colors">Pasta Making Classes</a>
+                <ul className="absolute left-0 mt-2 bg-warm-gray rounded shadow-lg p-2 hidden group-hover:block z-10 min-w-[220px]">
+                  <li><a href="/pasta-making/classic-italian" className="block px-4 py-2 hover:bg-primary/10 rounded transition-colors">Classic Italian Pasta Night</a></li>
+                  <li><a href="/pasta-making/regional-adventure" className="block px-4 py-2 hover:bg-primary/10 rounded transition-colors">Regional Pasta Adventure</a></li>
+                  <li><a href="/pasta-making/family-workshop" className="block px-4 py-2 hover:bg-primary/10 rounded transition-colors">Family Pasta Workshop</a></li>
+                </ul>
+              </li>
               <li><a href="#events" className="hover:text-primary transition-colors">Culinary Events</a></li>
             </ul>
           </div>

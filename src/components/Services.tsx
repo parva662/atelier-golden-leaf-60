@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import pastaMaking from "@/assets/pasta-making.jpg";
 import catering from "@/assets/catering.jpg";
@@ -33,7 +34,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-cream">
+    <section id="catering" className="py-20 bg-cream">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -75,9 +76,47 @@ const Services = () => {
                     </div>
                   ))}
                 </div>
-                <Button className="w-full bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground">
-                  Learn More
-                </Button>
+                {service.id === "catering" && (
+                  <Link
+                    to="/artisinal"
+                    className="w-full block bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground text-center px-4 py-2 rounded-md font-medium transition"
+                  >
+                    Learn More
+                  </Link>
+                )}
+                {service.id === "pasta" && (
+                  <div className="space-y-2">
+                    <Link
+                      to="/pasta-making"
+                      className="w-full block bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground text-center px-4 py-2 rounded-md font-medium transition"
+                    >
+                      Pasta Making Overview
+                    </Link>
+                    <Link
+                      to="/pasta-making/classic-italian"
+                      className="w-full block bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground text-center px-4 py-2 rounded-md font-medium transition"
+                    >
+                      Classic Italian Pasta Night
+                    </Link>
+                    <Link
+                      to="/pasta-making/regional-adventure"
+                      className="w-full block bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground text-center px-4 py-2 rounded-md font-medium transition"
+                    >
+                      Regional Pasta Adventure
+                    </Link>
+                    <Link
+                      to="/pasta-making/family-workshop"
+                      className="w-full block bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground text-center px-4 py-2 rounded-md font-medium transition"
+                    >
+                      Family Pasta Workshop
+                    </Link>
+                  </div>
+                )}
+                {service.id === "events" && (
+                  <Button className="w-full bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground">
+                    Learn More
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}

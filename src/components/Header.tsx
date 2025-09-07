@@ -1,14 +1,23 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "About", href: "#about" },
-    { name: "Catering", href: "#catering" },
-    { name: "Pasta Making", href: "#pasta" },
+  { name: "About", href: "/#about" },
+    { name: "Catering", href: "/artisinal" },
+    {
+      name: "Pasta Making",
+      href: "/pasta-making",
+      sublinks: [
+        { name: "Classic Italian Pasta Night", href: "/pasta-making/classic-italian" },
+        { name: "Regional Pasta Adventure", href: "/pasta-making/regional-adventure" },
+        { name: "Family Pasta Workshop", href: "/pasta-making/family-workshop" }
+      ]
+    },
     { name: "Events", href: "#events" },
     { name: "Contact", href: "#contact" },
   ];
@@ -25,14 +34,42 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors relative group"
-              >
-                {item.name}
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-golden to-sage scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </a>
+              item.sublinks ? (
+                <div key={item.name} className="relative group">
+                  <Link
+                    to={item.href}
+                    className="text-foreground hover:text-primary transition-colors relative group"
+                  >
+                    {item.name}
+                    <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-golden to-sage scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                  </Link>
+                  <div className="absolute left-0 mt-2 bg-background rounded shadow-lg p-2 hidden group-hover:block z-10 min-w-[220px]">
+                    {item.sublinks.map((sub) => (
+                      <Link key={sub.name} to={sub.href} className="block px-4 py-2 hover:bg-primary/10 rounded transition-colors text-foreground">
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : item.href.startsWith("/") ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-foreground hover:text-primary transition-colors relative group"
+                >
+                  {item.name}
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-golden to-sage scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                </Link>
+              ) : (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-foreground hover:text-primary transition-colors relative group"
+                >
+                  {item.name}
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-golden to-sage scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                </a>
+              )
             ))}
             <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               Book a Class
@@ -53,14 +90,42 @@ const Header = () => {
           <div className="md:hidden absolute top-16 left-0 right-0 bg-background border-b border-border shadow-lg">
             <nav className="flex flex-col p-4 space-y-4">
               {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.sublinks ? (
+                  <div key={item.name} className="relative">
+                    <Link
+                      to={item.href}
+                      className="text-foreground hover:text-primary transition-colors py-2"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                    <div className="pl-4 mt-2">
+                      {item.sublinks.map((sub) => (
+                        <Link key={sub.name} to={sub.href} className="block px-4 py-2 hover:bg-primary/10 rounded transition-colors text-foreground" onClick={() => setIsMenuOpen(false)}>
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : item.href.startsWith("/") ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-foreground hover:text-primary transition-colors py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-foreground hover:text-primary transition-colors py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
               <Button variant="outline" className="mt-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                 Book a Class
