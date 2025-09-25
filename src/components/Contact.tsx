@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
               <CardTitle className="text-2xl text-foreground">Get in Touch</CardTitle>
             </CardHeader>
             <CardContent>
-              <form className="space-y-6">
+              <form className="space-y-6" action="https://formspree.io/f/mrbybkng"  method="POST">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="first-name" className="block text-sm font-medium text-foreground mb-2">
