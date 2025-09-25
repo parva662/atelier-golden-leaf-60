@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import chefPortrait from "@/assets/chef-portrait.jpg";
+import pari from "@/assets/pari.jpg";
 import { Link } from "react-router-dom";
 import { route } from "@/lib/routes";
 
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-golden/20 to-sage/20 rounded-2xl transform rotate-3"></div>
             <img
-              src={chefPortrait}
+              src={pari}
               alt="Maria - Artisanal Chef and Food Blogger"
               className="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto"
             />

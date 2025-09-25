@@ -14,6 +14,7 @@ const ROUTES = {
       customMenus: 'custom-menus',
       localSourcing: 'local-sourcing',
       personalService: 'personal-service',
+      fast: 'testpari',
       // add more artisanal subpages here if needed
     }
   ),

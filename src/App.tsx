@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "@/components/ScrollToTop";
 
 /**
  * Main App component sets up global providers and routing for the site.
@@ -33,6 +33,7 @@ import AboutPage from "./pages/About";
 import CustomMenusPage from "./pages/Artisanal/CustomMenuPages";
 import LocalSourcingPage from "./pages/Artisanal/LocalSourcing";
 import PersonalServicePage from "./pages/Artisanal/PersonalService";
+import FastPage from "./pages/Artisanal/Fast";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +51,7 @@ const App: React.FC = () => (
             <Route path="/artisanal/custom-menus" element={<CustomMenusPage />} />
             <Route path="/artisanal/local-sourcing" element={<LocalSourcingPage />} />
             <Route path="/artisanal/personal-service" element={<PersonalServicePage />} />
+            <Route path="/artisanal/testpari" element={<FastPage />} />
             <Route path="/pasta-making" element={<PastaMakingPage />} />
             <Route path="/events" element={<EventsPage />} />
             <Route path="/pasta-making/classic-italian" element={<ClassicItalianPage />} />

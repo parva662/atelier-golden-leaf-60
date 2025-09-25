@@ -13,6 +13,7 @@ const ArtisanalHeaderNav = () => (
         <Link to={route('artisanal.customMenus')} className="px-6 py-3 rounded-full bg-gradient-to-r from-golden to-sage text-background font-semibold shadow hover:scale-105 transition">Custom Menus</Link>
         <Link to={route('artisanal.localSourcing')} className="px-6 py-3 rounded-full bg-gradient-to-r from-sage to-golden text-background font-semibold shadow hover:scale-105 transition">Local Sourcing</Link>
         <Link to={route('artisanal.personalService')} className="px-6 py-3 rounded-full bg-gradient-to-r from-golden to-sage text-background font-semibold shadow hover:scale-105 transition">Personal Service</Link>
+        <Link to={route('artisanal.fast')} className="px-6 py-3 rounded-full bg-gradient-to-r from-golden to-sage text-background font-semibold shadow hover:scale-105 transition">Fast</Link>
       </div>
     </nav>
     {/* Header section with main image and intro */}

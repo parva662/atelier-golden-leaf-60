@@ -19,6 +19,7 @@ import ArtisanalHeaderNav from "@/components/Artisanal/ArtisanalHeaderNav";
 import CustomMenus from "@/components/Artisanal/CustomMenus";
 import LocalSourcing from "@/components/Artisanal/LocalSourcing";
 import PersonalService from "@/components/Artisanal/PersonalService";
+import Fast from "@/components/Artisanal/Fast";
 
 /**
  * Artisanal component renders the full Artisanal Catering experience page.
@@ -41,6 +42,7 @@ const Artisanal = () => {
       <CustomMenus />
       <LocalSourcing />
       <PersonalService />
+      <Fast />
       {/* Footer call-to-action: request a quote */}
       <footer className="container mx-auto px-4 text-center py-16">
         <Link to={route('requestQuote')} className="inline-block px-8 py-4 bg-primary text-background font-bold rounded-full shadow hover:bg-sage transition">Request a Quote</Link>
