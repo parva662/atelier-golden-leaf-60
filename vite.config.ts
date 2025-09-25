@@ -18,5 +18,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: './src' // Since this will be the base directory
+  base: '/' // Since this will be the base directory
 }));
