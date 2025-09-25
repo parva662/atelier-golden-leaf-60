@@ -44,20 +44,20 @@ const Contact: React.FC = () => {
                     <label htmlFor="first-name" className="block text-sm font-medium text-foreground mb-2">
                       First Name
                     </label>
-                    <Input id="first-name" placeholder="Your first name" />
+                    <Input id="first-name" name="firstName" placeholder="Your first name" />
                   </div>
                   <div>
                     <label htmlFor="last-name" className="block text-sm font-medium text-foreground mb-2">
                       Last Name
                     </label>
-                    <Input id="last-name" placeholder="Your last name" />
+                    <Input id="last-name" name= "lastName" placeholder="Your last name" />
                   </div>
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                     Email
                   </label>
-                  <Input id="email" type="email" placeholder="your.email@example.com" />
+                  <Input id="email" name="email" type="email" placeholder="your.email@example.com" />
                 </div>
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">
@@ -65,6 +65,7 @@ const Contact: React.FC = () => {
                   </label>
                   <select 
                     id="service" 
+                    name="service" 
                     className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                     <option value="">Select a service</option>
@@ -77,7 +78,7 @@ const Contact: React.FC = () => {
                   <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                     Message
                   </label>
-                  <Textarea id="message" rows={4} placeholder="Tell me about your event, class, or request..." />
+                  <Textarea id="message" name="message" rows={4} placeholder="Tell me about your event, class, or request..." />
                 </div>
                 <Button type="submit" className="w-full bg-primary text-background font-bold rounded-full shadow hover:bg-sage transition">
                   Send Message
