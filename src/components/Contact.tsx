@@ -88,23 +88,23 @@ const Contact: React.FC = () => {
           <div className="flex flex-col justify-center space-y-8">
             <div className="flex items-center space-x-4">
               <Mail className="w-6 h-6 text-primary" />
-              <span className="text-lg text-foreground">ibrahim@butterflybites.com</span>
+              <span className="text-lg text-foreground">parvaneh550@gmail.com</span>
             </div>
             <div className="flex items-center space-x-4">
               <Phone className="w-6 h-6 text-primary" />
-              <span className="text-lg text-foreground">(555) 123-4567</span>
+              <span className="text-lg text-foreground">(+31) 0644517101</span>
             </div>
             <div className="flex items-center space-x-4">
               <MapPin className="w-6 h-6 text-primary" />
-              <span className="text-lg text-foreground">San Francisco, CA</span>
+              <span className="text-lg text-foreground">Ede, Netherlands</span>
             </div>
             <div className="flex items-center space-x-4">
               <Instagram className="w-6 h-6 text-primary" />
-              <a href="https://instagram.com/butterflybites" className="text-lg text-primary hover:underline">@butterflybites</a>
+              <a href="https://instagram.com/butterfly__bites" className="text-lg text-primary hover:underline">@butterflybites</a>
             </div>
             <div className="flex items-center space-x-4">
               <Facebook className="w-6 h-6 text-primary" />
-              <a href="https://facebook.com/butterflybites" className="text-lg text-primary hover:underline">Butterfly Bites</a>
+              <a href="" className="text-lg text-primary hover:underline">Butterfly Bites</a>
             </div>
           </div>
         </div>

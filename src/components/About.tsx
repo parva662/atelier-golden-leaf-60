@@ -17,7 +17,7 @@ const About = () => {
                 Growing up in my grandmother's kitchen, I learned that cooking isn't just about following recipes—it's about pouring love into every ingredient, honoring traditions while creating new memories.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                After years of working in corporate kitchens, I returned to my roots: slow food, handmade pasta, and the simple joy of sharing a meal made with intention and care.
+                After years of working in University as an AI developer, I returned to my roots: slow food, handmade pasta, and the simple joy of sharing a meal made with intention and care.
               </p>
             </div>
             
