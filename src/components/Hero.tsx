@@ -22,9 +22,9 @@ const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-6">
             <h1 className="text-5xl lg:text-6xl font-bold text-foreground">
-              From My Kitchen
+              I Cook with Heart
               <span className="block text-primary bg-gradient-to-r from-golden to-sage bg-clip-text text-transparent">
-                To Your Heart
+                You Taste the Art
               </span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">

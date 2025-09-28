@@ -11,7 +11,7 @@ const LocalSourcing = () => (
       <img src="/src/assets/cooking-event.jpg" alt="Local farm ingredients for catering" className="w-40 h-40 rounded-full object-cover shadow-lg mb-6 md:mb-0" />
       <div className="flex-1">
         <h2 className="text-3xl font-bold text-foreground mb-4">Local Sourcing</h2>
-        <p className="text-lg text-muted-foreground mb-4">Chef Ibrahim’s philosophy is simple: the best meals start with the best ingredients. That’s why we source fresh, seasonal produce and artisanal products from local partners who share our passion for quality and sustainability.</p>
+        <p className="text-lg text-muted-foreground mb-4">Butterfly Bites philosophy is simple: the best meals start with the best ingredients. That’s why we source fresh, seasonal produce and artisanal products from local partners who share our passion for quality and sustainability.</p>
         <div className="grid md:grid-cols-2 gap-8 mb-6">
           <div className="bg-background rounded-xl shadow p-6">
             <h3 className="text-lg font-semibold text-primary mb-2">Green Valley Farms</h3>

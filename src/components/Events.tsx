@@ -16,7 +16,7 @@ const events = [
   },
   {
     title: "Pasta & Paint Pop-Up",
-    description: "Unleash your creativity with a hands-on pasta making class followed by a guided painting session. Sip wine, make art, and enjoy a communal meal.",
+    description: "Unleash your creativity with a hands-on pasta making class, but not a normal pasta, a piece of art. Sip wine, make art, and enjoy a communal meal.",
     image: "/src/assets/pasta-making.jpg",
     highlights: [
       "All art supplies included",
@@ -27,7 +27,7 @@ const events = [
   },
   {
     title: "Harvest Celebration Dinner",
-    description: "Celebrate the bounty of autumn with a multi-course feast, local wine tastings, and a chef Q&A. Each dish tells the story of the season.",
+    description: "Celebrate the bounty of autumn with a multi-course feast and a chef Q&A. Each dish tells the story of the season.",
     image: "/src/assets/catering.jpg",
     highlights: [
       "Seasonal tasting menu",
@@ -75,7 +75,7 @@ const Events = () => (
         </div>
         <div className="bg-card rounded-2xl shadow p-8 flex flex-col justify-center">
           <h3 className="text-xl font-semibold text-primary mb-2">Personal Touch</h3>
-          <p className="text-muted-foreground mb-4">Chef Ibrahim and his team bring warmth, creativity, and attention to detail to every gathering. You’re not just a guest—you’re family.</p>
+          <p className="text-muted-foreground mb-4">Butterfly Bites will bring warmth, creativity, and attention to detail to every gathering. You’re not just a guest—you’re family.</p>
           <h3 className="text-xl font-semibold text-primary mb-2">Memories to Last</h3>
           <p className="text-muted-foreground">From keepsake recipes to new friendships, our events leave you with more than just a full belly.</p>
         </div>

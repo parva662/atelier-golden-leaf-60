@@ -40,7 +40,7 @@ const sampleClasses = [
 const testimonials = [
   {
     name: "Luca & Maria",
-    quote: "We never thought we could make pasta like this! Chef Ibrahim’s class was the highlight of our trip.",
+    quote: "We never thought we could make pasta like this! Butterfly Bites’s class was the highlight of our trip.",
     image: "/src/assets/chef-portrait.jpg"
   },
   {
@@ -62,7 +62,7 @@ const PastaMaking = () => {
       </nav>
       <header className="container mx-auto px-4 max-w-3xl text-center mb-16">
         <h1 className="text-5xl font-extrabold text-foreground mb-6">Pasta Making Classes</h1>
-        <p className="text-xl text-muted-foreground mb-8">Discover the magic of handmade pasta in Chef Ibrahim’s immersive, joy-filled workshops. From flour to feast, every moment is a celebration of tradition, creativity, and connection.</p>
+        <p className="text-xl text-muted-foreground mb-8">Discover the magic of handmade pasta in Butterfly Bites’s immersive, joy-filled workshops. From flour to feast, every moment is a celebration of tradition, creativity, and connection.</p>
         <img src="/src/assets/pasta-making.jpg" alt="Fresh handmade pasta" className="rounded-3xl shadow-2xl w-full object-cover max-h-[400px] mx-auto mb-8" />
         <Link to="/request-quote" className="inline-block px-8 py-4 bg-primary text-background font-bold rounded-full shadow hover:bg-sage transition">Reserve Your Spot</Link>
       </header>

@@ -77,12 +77,25 @@ const Header: React.FC = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-2">
-            <Link to={route('home')} className="flex items-center space-x-2">
-              <img src="/butterfly-bites-logo.png" alt="Butterfly Bites Logo" className="w-8 h-8 object-contain" />
-              <span className="font-bold text-xl text-foreground">Butterfly Bites</span>
+          <div className="flex items-center space-x-3">
+            <Link to={route('home')} className="flex items-center space-x-0">
+              {/* Logo image */}
+              <img 
+                src="/Butterfly-image.png"
+                //src="/newlogo.png"  
+                alt="Butterfly Bites Logo" 
+                className="h-14 w-auto " 
+              />
+
+              {/* Text image */}
+              <img 
+                src="/Butterfly-word.png" 
+                alt="Butterfly Bites Text" 
+                className="h-9" 
+              />
             </Link>
           </div>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">

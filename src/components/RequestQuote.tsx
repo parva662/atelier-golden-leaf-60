@@ -35,7 +35,7 @@ const RequestQuote = () => {
         {submitted ? (
           <div className="bg-card rounded-xl shadow p-8 text-center">
             <h2 className="text-2xl font-semibold text-primary mb-4">Thank you!</h2>
-            <p className="text-muted-foreground">Your request has been received. Chef Ibrahim will be in touch soon.</p>
+            <p className="text-muted-foreground">Your request has been received. Butterfly Bites will be in touch soon.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="bg-card rounded-xl shadow p-8 space-y-6">

@@ -11,7 +11,7 @@ const CustomMenus = () => (
       <img src="/src/assets/pasta-making.jpg" alt="Handmade pasta for custom menus" className="w-40 h-40 rounded-full object-cover shadow-lg mb-6 md:mb-0" />
       <div className="flex-1">
         <h2 className="text-3xl font-bold text-foreground mb-4">Custom Menus</h2>
-        <p className="text-lg text-muted-foreground mb-4">Every event deserves a menu as unique as its guests. Chef Ibrahim works closely with you to design a culinary experience that reflects your tastes, traditions, and dreams. From elegant plated dinners to rustic family-style feasts, every dish is crafted with artistry and care.</p>
+        <p className="text-lg text-muted-foreground mb-4">Every event deserves a menu as unique as its guests. Butterfly Bites cook (Pari) works closely with you to design a culinary experience that reflects your tastes, traditions, and dreams. From elegant plated dinners to rustic family-style feasts, every dish is crafted with artistry and care.</p>
         <div className="grid md:grid-cols-3 gap-8">
           {/* Spring Feast menu example */}
           <div className="bg-background rounded-xl shadow p-6 flex flex-col items-center">
