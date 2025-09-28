@@ -2,11 +2,16 @@ import { scrollToTop } from "./PastaMaking/pastaClassNavUtils";
 import { Link } from "react-router-dom";
 import { route } from "@/lib/routes";
 
+// Import images from src/assets
+import CookingEventImg from "@/assets/cooking-event.jpg";
+import PastaMakingImg from "@/assets/pasta-making.jpg";
+import CateringImg from "@/assets/catering.jpg";
+
 const events = [
   {
     title: "Midnight Feast in the Olive Grove",
     description: "A magical, candlelit dinner under the stars, featuring seasonal farm-to-table dishes, live acoustic music, and storytelling by local artists.",
-    image: "/src/assets/cooking-event.jpg",
+    image: CookingEventImg,
     highlights: [
       "Farm-fresh tasting menu",
       "Live music & poetry",
@@ -17,7 +22,7 @@ const events = [
   {
     title: "Pasta & Paint Pop-Up",
     description: "Unleash your creativity with a hands-on pasta making class, but not a normal pasta, a piece of art. Sip wine, make art, and enjoy a communal meal.",
-    image: "/src/assets/pasta-making.jpg",
+    image: PastaMakingImg,
     highlights: [
       "All art supplies included",
       "Wine pairings",
@@ -28,7 +33,7 @@ const events = [
   {
     title: "Harvest Celebration Dinner",
     description: "Celebrate the bounty of autumn with a multi-course feast and a chef Q&A. Each dish tells the story of the season.",
-    image: "/src/assets/catering.jpg",
+    image: CateringImg,
     highlights: [
       "Seasonal tasting menu",
       "Meet the farmers & winemakers",
@@ -43,7 +48,7 @@ const Events = () => (
     <header className="container mx-auto px-4 max-w-4xl text-center mb-16">
       <h1 className="text-5xl font-extrabold text-foreground mb-6">Unforgettable Culinary Events</h1>
       <p className="text-xl text-muted-foreground mb-8">Step into a world where food, art, and community collide. Our events are immersive, joyful, and designed to spark connection. Whether you’re dining under the stars or painting pasta, every moment is a celebration.</p>
-      <img src="/src/assets/cooking-event.jpg" alt="Culinary event under the stars" className="rounded-3xl shadow-2xl w-full object-cover max-h-[400px] mx-auto mb-8" />
+      <img src={CookingEventImg} alt="Culinary event under the stars" className="rounded-3xl shadow-2xl w-full object-cover max-h-[400px] mx-auto mb-8" />
       <Link to={route('requestQuote')} className="inline-block px-8 py-4 bg-primary text-background font-bold rounded-full shadow hover:bg-sage transition" onClick={scrollToTop}>Reserve Your Spot</Link>
     </header>
     <section className="container mx-auto px-4 max-w-5xl py-12">
@@ -89,7 +94,7 @@ const Events = () => (
           <span className="font-semibold text-primary">— Sofia & Marco</span>
         </div>
         <div className="bg-background rounded-xl shadow p-6 flex flex-col items-center text-center">
-          <img src="/src/assets/pasta-making.jpg" alt="Guest testimonial" className="w-16 h-16 rounded-full object-cover mb-2 shadow" />
+          <img src={PastaMakingImg} alt="Guest testimonial" className="w-16 h-16 rounded-full object-cover mb-2 shadow" />
           <blockquote className="italic text-muted-foreground mb-2">“Painting pasta and sharing a meal with new friends was the highlight of my year!”</blockquote>
           <span className="font-semibold text-primary">— Priya</span>
         </div>
