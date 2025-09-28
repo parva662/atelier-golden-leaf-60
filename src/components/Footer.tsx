@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/Butterfly-image.png" alt="Butterfly Bites Logo" className="w-8 h-8 object-contain" />
+              <img src="/Butterfly-image.png" alt="Butterfly Bites Logo" className="w-auto h-12 object-contain" />
               {/* Text image */}
               <img 
                 src="/Butterfly-word.png" 
