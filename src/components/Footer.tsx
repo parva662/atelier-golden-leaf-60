@@ -19,8 +19,13 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/butterfly-bites-logo.png" alt="Butterfly Bites Logo" className="w-8 h-8 object-contain" />
-              <span className="font-bold text-xl">Butterfly Bites</span>
+              <img src="/Butterfly-image.png" alt="Butterfly Bites Logo" className="w-8 h-8 object-contain" />
+              {/* Text image */}
+              <img 
+                src="/Butterfly-word.png" 
+                alt="Butterfly Bites Text" 
+                className="h-9" 
+              />
             </div>
             <p className="text-cream/80 leading-relaxed">
               Sharing the art of handmade cuisine and bringing people together around the table, one meal at a time.
