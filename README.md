@@ -1,4 +1,4 @@
-# Section 1 — Project Structure: Understanding the Skeleton of Maria’s Kitchen
+# Section 1 — Project Structure: Understanding the Skeleton of Pari’s Kitchen
 
 Before diving into React components, state, routing, or TypeScript, we need to understand the skeleton of the project. The folder and file layout is not arbitrary. Each directory has a clear purpose. If you understand that purpose, you’ll always know where to add new code and where to find existing logic. Think of this as learning the “floor plan” of a building before moving furniture inside.
 
@@ -282,7 +282,7 @@ The entry points are deceptively simple, but they are the foundation of the app.
 - main.tsx is the ignition that mounts React into that skeleton.  
 - App.tsx is the conductor that wires together global services and routes.
 
-Together, they form the “front door, light switch, and control panel” of Maria’s Kitchen. If you ever feel lost in the app, remember: this is where it all begins.
+Together, they form the “front door, light switch, and control panel” of Pari’s Kitchen. If you ever feel lost in the app, remember: this is where it all begins.
 
 # Section 2.4 — Deep Dive into QueryClientProvider (React Query in App.tsx)
 
@@ -409,7 +409,7 @@ This pattern ensures that when you create a new event, the cache invalidates and
 Analogy
 ----------------------------------------------------------------------
 
-Imagine the QueryClient as a well-staffed **kitchen pantry** in Maria’s Kitchen:
+Imagine the QueryClient as a well-staffed **kitchen pantry** in Pari’s Kitchen:
 - If a waiter (component) asks for flour (data), the pantry manager first checks the shelves (cache).
 - If flour is there and fresh, it’s handed over immediately.
 - If it’s missing or stale, someone runs to the market (API) to fetch it.
@@ -437,9 +437,9 @@ This repo uses QueryClientProvider correctly by defining one client at the top l
 
 # Section 3 — Providers, Context, and Hooks: The Invisible Utilities That Power the App (Router deferred to next chapter)
 
-This chapter is dedicated to **Providers**, **Context**, and **Hooks** — three concepts that often confuse junior developers because they don’t produce obvious UI, yet they make everything else in the app work. To understand Maria’s Kitchen as a project, you must understand these invisible systems.
+This chapter is dedicated to **Providers**, **Context**, and **Hooks** — three concepts that often confuse junior developers because they don’t produce obvious UI, yet they make everything else in the app work. To understand Pari’s Kitchen as a project, you must understand these invisible systems.
 
-Think of Maria’s Kitchen (the app) as the physical restaurant:
+Think of Pari’s Kitchen (the app) as the physical restaurant:
 - **Providers** are like the utility hookups — water, gas, electricity, Wi-Fi, PA system. They run through the whole building. You don’t eat them, but without them nothing works.  
 - **Context** is like the shared “blueprint + piping” system. It defines where the water and electricity flow, how they’re accessed, and ensures consistency across the restaurant.  
 - **Hooks** are like the actual tools used in the kitchen — knives, pans, pasta rollers. They let chefs (components) use the utilities and prepare food in a consistent, repeatable way.
@@ -492,7 +492,7 @@ export function useCart() {
 
 Now, if you forget `<CartProvider>`, the app crashes immediately during development with a clear error. This is **fail fast, fail loud**.  
 
-**Real world application in Maria’s Kitchen:**  
+**Real world application in Pari’s Kitchen:**  
 - Suppose CheckoutPage forgets to include CartProvider.  
 - With a fake default, it would silently show “empty cart,” and customers would lose items.  
 - With a null default, it throws instantly: “useCart must be used within <CartProvider>.” You fix the bug before it ever reaches production.
