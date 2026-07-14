@@ -22,14 +22,17 @@ const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-6">
             <p className="text-sm font-semibold uppercase tracking-wide text-primary">Butterfly Bites Catering</p>
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground">
-              Handmade catering,
-              <span className="block text-primary bg-gradient-to-r from-golden to-sage bg-clip-text text-transparent">
-                pasta workshops & events
+            <h1 className="text-4xl lg:text-5xl font-bold leading-tight lg:leading-[1.08] text-foreground">
+              Persian catering,
+              <span className="block text-sage">
+                handmade fresh pasta
+              </span>
+              <span className="block text-sage">
+                & events
               </span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Warm, personal food experiences by Pari: Persian-inspired catering, fresh pasta workshops, and culinary gatherings made with care.
+              Colorful, warm food experiences by Pari: Persian-inspired catering, handmade fresh pasta, pasta workshops, and culinary gatherings made with care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
@@ -51,7 +54,7 @@ const Hero: React.FC = () => {
             <img
               src={pari}
               alt="Pari with a Butterfly Bites catering table"
-              className="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto"
+              className="relative rounded-2xl shadow-2xl w-full max-w-sm lg:max-w-md mx-auto"
             />
           </div>
         </div>

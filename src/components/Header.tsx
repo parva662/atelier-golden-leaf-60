@@ -34,7 +34,7 @@ const Header: React.FC = () => {
     { name: "Home", href: route('home') },
     { name: "Catering", href: route('artisanal') },
     {
-      name: "Pasta Workshops",
+      name: "Pasta",
       href: route('pastaMaking'),
       sublinks: [
         { name: "Classic Italian Pasta Night", href: route('pastaMaking.classicItalian') },
@@ -139,13 +139,6 @@ const Header: React.FC = () => {
                 </Link>
               )
             ))}
-            <Link
-              to={route('requestQuote')}
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-4 py-2 rounded-md border block"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              Request a Quote
-            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -201,13 +194,6 @@ const Header: React.FC = () => {
                   </a>
                 )
               ))}
-              <Link
-                to={route('requestQuote')}
-                className="mt-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-4 py-2 rounded-md border block text-center"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              >
-                Request a Quote
-              </Link>
             </nav>
           </div>
         )}
