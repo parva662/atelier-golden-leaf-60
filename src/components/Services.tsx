@@ -1,6 +1,6 @@
 
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { route } from "@/lib/routes";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import pastaMaking from "@/assets/pasta-making.jpg";
 import catering from "@/assets/catering.jpg";
@@ -34,27 +34,33 @@ const Services: React.FC = () => {
   const services = [
     {
       id: "catering",
-      title: "Artisanal Catering",
-      description: "Handcrafted menus for intimate gatherings and special occasions",
+      title: "Catering",
+      description: "Custom food tables and handmade menus for gatherings and celebrations",
       image: catering,
-      details: "From intimate dinner parties to celebration feasts, I create bespoke menus using seasonal ingredients and traditional techniques. Every dish is prepared with love and attention to detail.",
-      features: ["Custom menu design", "Fresh, local ingredients", "Professional presentation", "Dietary accommodations"]
+      details: "For hosts who want a warm, abundant table without losing the personal touch. Menus can be shaped around your occasion, guests, and dietary needs.",
+      features: ["Custom menu planning", "Celebration tables", "Personal presentation", "Dietary accommodations"],
+      actionLabel: "View Catering",
+      actionHref: route('artisanal'),
     },
     {
       id: "pasta",
-      title: "Pasta Making Classes",
-      description: "Learn the ancient art of handmade pasta in small, intimate groups",
+      title: "Pasta Workshops",
+      description: "Hands-on fresh pasta sessions for families, friends, and small groups",
       image: pastaMaking,
-      details: "Discover the meditative joy of pasta making. In these hands-on classes, you'll learn traditional techniques passed down through generations while creating delicious memories.",
-      features: ["Traditional techniques", "Small class sizes", "Take-home recipes", "All materials included"]
+      details: "Learn the joy of handmade pasta in a relaxed workshop format. Guests make, taste, and share the experience together.",
+      features: ["Hands-on techniques", "Small group format", "Take-home recipes", "Shared meal experience"],
+      actionLabel: "Explore Pasta Workshops",
+      actionHref: route('pastaMaking'),
     },
     {
       id: "events",
-      title: "Culinary Events",
-      description: "Unique dining experiences and pop-up dinners that tell a story",
+      title: "Events / Culinary Experiences",
+      description: "Seasonal experiences, pop-ups, and future Butterfly Bites gatherings",
       image: cookingEvent,
-      details: "Join me for seasonal pop-up dinners, cooking workshops, and collaborative events with local farmers and artisans. Each event is a celebration of community and craft.",
-      features: ["Seasonal menus", "Storytelling dinners", "Farm collaborations", "Limited seating"]
+      details: "The Events page stays ready for upcoming real dates, menus, and experiences as they are confirmed.",
+      features: ["Future event listings", "Workshop experiences", "Seasonal ideas", "Community gatherings"],
+      actionLabel: "See Events",
+      actionHref: route('events'),
     }
   ];
 
@@ -63,18 +69,18 @@ const Services: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            What I
+            Choose your
             <span className="block text-primary bg-gradient-to-r from-golden to-sage bg-clip-text text-transparent">
-              Offer
+              Butterfly Bites experience
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Each service is designed to share the joy of authentic, handmade cuisine while building connections around the table.
+            Three clear ways to gather around handmade food: catering, pasta workshops, and culinary events.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <Card key={service.id} className="group hover:shadow-xl transition-all duration-300 border-border/50 bg-card">
               <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
                 <img
@@ -101,50 +107,12 @@ const Services: React.FC = () => {
                     </div>
                   ))}
                 </div>
-                {service.id === "catering" && (
-                  <Link
-                    to="/artisinal"
-                    className="w-full block bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground text-center px-4 py-2 rounded-md font-medium transition"
-                  >
-                    Learn More
-                  </Link>
-                )}
-                {service.id === "pasta" && (
-                  <div className="space-y-2">
-                    <Link
-                      to="/pasta-making"
-                      className="w-full block bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground text-center px-4 py-2 rounded-md font-medium transition"
-                    >
-                      Pasta Making Overview
-                    </Link>
-                    <Link
-                      to="/pasta-making/classic-italian"
-                      className="w-full block bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground text-center px-4 py-2 rounded-md font-medium transition"
-                    >
-                      Classic Italian Pasta Night
-                    </Link>
-                    <Link
-                      to="/pasta-making/regional-adventure"
-                      className="w-full block bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground text-center px-4 py-2 rounded-md font-medium transition"
-                    >
-                      Regional Pasta Adventure
-                    </Link>
-                    <Link
-                      to="/pasta-making/family-workshop"
-                      className="w-full block bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground text-center px-4 py-2 rounded-md font-medium transition"
-                    >
-                      Family Pasta Workshop
-                    </Link>
-                  </div>
-                )}
-                {service.id === "events" && (
-                  <Link
-                    to="/events"
-                    className="w-full block bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground text-center px-4 py-2 rounded-md font-medium transition"
-                  >
-                    Learn More
-                  </Link>
-                )}
+                <Link
+                  to={service.actionHref}
+                  className="w-full block bg-gradient-to-r from-golden to-sage hover:from-golden/90 hover:to-sage/90 text-foreground text-center px-4 py-2 rounded-md font-medium transition"
+                >
+                  {service.actionLabel}
+                </Link>
               </CardContent>
             </Card>
           ))}

@@ -21,25 +21,26 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-6">
-            <h1 className="text-5xl lg:text-6xl font-bold text-foreground">
-              I Cook with Heart
+            <p className="text-sm font-semibold uppercase tracking-wide text-primary">Butterfly Bites Catering</p>
+            <h1 className="text-4xl lg:text-6xl font-bold text-foreground">
+              Handmade catering,
               <span className="block text-primary bg-gradient-to-r from-golden to-sage bg-clip-text text-transparent">
-                You Taste the Art
+                pasta workshops & events
               </span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Welcome to Butterfly Bites! What started as Sunday dinners for friends has grown into a passion for sharing the art of handmade cuisine. Every dish tells a story, every recipe carries tradition, and every meal brings people together.
+              Warm, personal food experiences by Pari: Persian-inspired catering, fresh pasta workshops, and culinary gatherings made with care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
-                to={route('contact')}
+                to={route('requestQuote')}
                 className="inline-block px-8 py-4 bg-gradient-to-r from-golden to-sage text-foreground font-medium rounded-md shadow hover:scale-105 transition"
               >
-                Explore My Services
+                Request Catering Quote
               </Link>
-              <Link to={route('about')}>
+              <Link to={route('pastaMaking')}>
                 <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  Watch My Story
+                  Book a Pasta Workshop
                 </Button>
               </Link>
             </div>
@@ -49,7 +50,7 @@ const Hero: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-golden/20 to-sage/20 rounded-2xl transform rotate-3"></div>
             <img
               src={pari}
-              alt="Maria - Artisanal Chef and Food Blogger"
+              alt="Pari with a Butterfly Bites catering table"
               className="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto"
             />
           </div>

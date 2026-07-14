@@ -1,6 +1,4 @@
 import Header from "@/components/Header";
-import Services from "@/components/Services";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import RequestQuote from "@/components/RequestQuote";
 
@@ -10,8 +8,6 @@ const RequestQuotePage = () => {
     <div className="min-h-screen">
       <Header />
       <RequestQuote />
-      <Services />
-      <Contact />
       <Footer />
     </div>
   );

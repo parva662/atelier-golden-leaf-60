@@ -1,7 +1,6 @@
 
 import Header from "@/components/Header";
-import Services from "@/components/Services";
-import Contact from "@/components/Contact";
+import BookingCTA from "@/components/BookingCTA";
 import Footer from "@/components/Footer";
 import Events from "@/components/Events";
 
@@ -11,8 +10,7 @@ const EventsPage = () => {
     <div className="min-h-screen">
       <Header />
       <Events />
-      <Services />
-      <Contact />
+      <BookingCTA title="Interested in a future Butterfly Bites event?" description="Use the request form for private experiences, workshop ideas, or future event inquiries." />
       <Footer />
     </div>
   );

@@ -1,7 +1,6 @@
 
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { route } from "@/lib/routes";
 
@@ -32,10 +31,10 @@ const Header: React.FC = () => {
    * @type {Array<{name: string, href: string, sublinks?: Array<{name: string, href: string}>}>}
    */
   const navigation = [
-    { name: "About", href: route('about') },
+    { name: "Home", href: route('home') },
     { name: "Catering", href: route('artisanal') },
     {
-      name: "Pasta Making",
+      name: "Pasta Workshops",
       href: route('pastaMaking'),
       sublinks: [
         { name: "Classic Italian Pasta Night", href: route('pastaMaking.classicItalian') },
@@ -44,6 +43,8 @@ const Header: React.FC = () => {
       ]
     },
     { name: "Events", href: route('events') },
+    { name: "Gallery", href: route('gallery') },
+    { name: "About Pari", href: route('about') },
     { name: "Contact", href: route('contact') },
   ];
 
@@ -98,7 +99,7 @@ const Header: React.FC = () => {
 
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-5">
             {navigation.map((item) => (
               item.sublinks ? (
                 <div
@@ -139,17 +140,19 @@ const Header: React.FC = () => {
               )
             ))}
             <Link
-              to={route('contact')}
+              to={route('requestQuote')}
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-4 py-2 rounded-md border block"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
-              Book a Class
+              Request a Quote
             </Link>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
             className="md:hidden"
+            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -199,11 +202,11 @@ const Header: React.FC = () => {
                 )
               ))}
               <Link
-                to={route('contact')}
+                to={route('requestQuote')}
                 className="mt-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-4 py-2 rounded-md border block text-center"
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
-                Book a Class
+                Request a Quote
               </Link>
             </nav>
           </div>

@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
-import Services from "@/components/Services";
-import Contact from "@/components/Contact";
+import BookingCTA from "@/components/BookingCTA";
 import Footer from "@/components/Footer";
 import RegionalAdventure from "@/components/PastaMaking/RegionalAdventure";
 
@@ -10,8 +9,7 @@ const RegionalAdventurePage = () => {
     <div className="min-h-screen">
       <Header />
       <RegionalAdventure />
-      <Services />
-      <Contact />
+      <BookingCTA title="Book this pasta workshop" description="Send your preferred date, group size, location, and any dietary needs." />
       <Footer />
     </div>
   );

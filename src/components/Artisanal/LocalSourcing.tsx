@@ -1,50 +1,48 @@
-/**
- * LocalSourcing.tsx
- * Page for Artisanal Catering - Local Sourcing section.
- */
-import { Link } from "react-router-dom";
-import { route } from "@/lib/routes";
+const values = [
+  {
+    title: "Seasonal ingredients",
+    description: "Menus can follow the season, the occasion, and what feels fresh and generous for the table.",
+  },
+  {
+    title: "Persian herbs and flavors",
+    description: "Herbs, brightness, texture, and abundance help guide the Persian-inspired catering direction.",
+  },
+  {
+    title: "Handmade preparation",
+    description: "Food is prepared with care, from dips and salads to pasta, sides, and shared dishes.",
+  },
+  {
+    title: "Menus shaped around your guests",
+    description: "Dietary needs, event style, group size, and preferences can shape the final menu proposal.",
+  },
+];
 
 const LocalSourcing = () => (
-  <section id="local-sourcing" className="container mx-auto px-4 py-16 max-w-5xl">
-    <div className="bg-card rounded-3xl shadow-xl p-10 flex flex-col md:flex-row gap-10 items-center">
-      <img src="/src/assets/cooking-event.jpg" alt="Local farm ingredients for catering" className="w-40 h-40 rounded-full object-cover shadow-lg mb-6 md:mb-0" />
-      <div className="flex-1">
-        <h2 className="text-3xl font-bold text-foreground mb-4">Local Sourcing</h2>
-        <p className="text-lg text-muted-foreground mb-4">Butterfly Bites philosophy is simple: the best meals start with the best ingredients. That’s why we source fresh, seasonal produce and artisanal products from local partners who share our passion for quality and sustainability.</p>
-        <div className="grid md:grid-cols-2 gap-8 mb-6">
-          <div className="bg-background rounded-xl shadow p-6">
-            <h3 className="text-lg font-semibold text-primary mb-2">Green Valley Farms</h3>
-            <p className="text-muted-foreground">Organic vegetables and herbs, picked at peak freshness.</p>
-          </div>
-          <div className="bg-background rounded-xl shadow p-6">
-            <h3 className="text-lg font-semibold text-primary mb-2">Bella Dairy</h3>
-            <p className="text-muted-foreground">Handcrafted cheeses from grass-fed cows.</p>
-          </div>
-          <div className="bg-background rounded-xl shadow p-6">
-            <h3 className="text-lg font-semibold text-primary mb-2">Sage Hill Gardens</h3>
-            <p className="text-muted-foreground">Aromatic herbs and edible flowers for vibrant flavor.</p>
-          </div>
-          <div className="bg-background rounded-xl shadow p-6">
-            <h3 className="text-lg font-semibold text-primary mb-2">Riverbend Orchards</h3>
-            <p className="text-muted-foreground">Seasonal fruits for desserts and preserves.</p>
-          </div>
+  <section id="local-sourcing" className="container mx-auto px-4 py-12 max-w-6xl">
+    <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-stretch">
+      <div className="bg-card rounded-2xl shadow-xl p-8 md:p-10">
+        <h2 className="text-3xl font-bold text-foreground mb-4">Fresh, Seasonal & Handmade</h2>
+        <p className="text-lg text-muted-foreground mb-8">
+          Butterfly Bites catering is built around handmade preparation, warm Persian-inspired flavors, and flexible menus
+          shaped around the people at your table.
+        </p>
+        <div className="grid md:grid-cols-2 gap-5">
+          {values.map((value) => (
+            <div key={value.title} className="bg-background rounded-xl border border-border p-5">
+              <h3 className="text-lg font-semibold text-primary mb-2">{value.title}</h3>
+              <p className="text-muted-foreground">{value.description}</p>
+            </div>
+          ))}
         </div>
-        <div className="bg-gradient-to-r from-sage to-golden rounded-xl shadow p-6 mb-6">
-          <h4 className="text-lg font-bold text-background mb-2">Why Local Matters</h4>
-          <ul className="list-disc list-inside text-background">
-            <li>Superior flavor and nutrition</li>
-            <li>Supports local farmers and artisans</li>
-            <li>Reduces environmental impact</li>
-            <li>Celebrates the region’s culinary heritage</li>
-          </ul>
+      </div>
+      <div className="rounded-2xl border border-dashed border-primary/50 bg-cream p-8 flex items-center justify-center text-center">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">Future image</p>
+          <p className="text-muted-foreground">
+            Add a real close-up of Pari's Persian-inspired catering ingredients, handmade preparation, or finished table in
+            Phase 2B.
+          </p>
         </div>
-        <div className="grid grid-cols-3 gap-4 mb-6">
-          <img src="/src/assets/catering.jpg" alt="Farm-to-table catering" className="rounded-xl object-cover h-24 w-full shadow" />
-          <img src="/src/assets/pasta-making.jpg" alt="Fresh pasta ingredients" className="rounded-xl object-cover h-24 w-full shadow" />
-          <img src="/src/assets/cooking-event.jpg" alt="Local produce at event" className="rounded-xl object-cover h-24 w-full shadow" />
-        </div>
-        <Link to={route('requestQuote')} className="inline-block mt-4 px-6 py-3 bg-gradient-to-r from-sage to-golden text-background rounded-full font-semibold shadow hover:scale-105 transition">Request a Quote</Link>
       </div>
     </div>
   </section>

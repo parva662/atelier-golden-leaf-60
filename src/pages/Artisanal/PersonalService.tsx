@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
-import Services from "@/components/Services";
-import Contact from "@/components/Contact";
+import BookingCTA from "@/components/BookingCTA";
 import Footer from "@/components/Footer";
 import PersonalService from "@/components/Artisanal/PersonalService";
 
@@ -10,8 +9,7 @@ const PersonalServicePage = () => {
     <div className="min-h-screen">
       <Header />
       <PersonalService />
-      <Services />
-      <Contact />
+      <BookingCTA title="Need personal catering support?" description="Use the request form to share your event style, date, guest count, and service needs." />
       <Footer />
     </div>
   );

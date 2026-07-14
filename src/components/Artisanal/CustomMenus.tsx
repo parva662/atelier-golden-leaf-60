@@ -1,58 +1,62 @@
-/**
- * CustomMenus.tsx
- * Page for Artisanal Catering - Custom Menus section.
- */
-import { Link } from "react-router-dom";
-import { route } from "@/lib/routes";
+const menuIdeas = [
+  {
+    title: "Persian Celebration Table",
+    note: "Inspired by generous Persian hosting",
+    items: [
+      "Herb-forward dips, breads, pickles, and seasonal salads",
+      "Rice, roasted vegetables, herbs, and warm sharing dishes",
+      "Fruit, nuts, sweets, or a light dessert finish",
+    ],
+  },
+  {
+    title: "Tuscan Table",
+    note: "Italian-style inspiration for pasta-forward gatherings",
+    items: [
+      "Burrata with tomatoes, basil, and olive oil",
+      "Handmade pasta with a seasonal sauce",
+      "Citrus or olive oil cake with fruit",
+    ],
+  },
+  {
+    title: "Persian-Italian Gathering",
+    note: "A custom table that connects Pari's roots with fresh pasta craft",
+    items: [
+      "Persian herbs, dips, and colorful table starters",
+      "Fresh pasta or handmade centerpiece dish",
+      "Shared sides and a relaxed dessert moment",
+    ],
+  },
+];
 
 const CustomMenus = () => (
-  <section className="container mx-auto px-4 py-16 max-w-5xl">
-    <div className="bg-card rounded-3xl shadow-xl p-10 flex flex-col md:flex-row gap-10 items-center">
-      <img src="/src/assets/pasta-making.jpg" alt="Handmade pasta for custom menus" className="w-40 h-40 rounded-full object-cover shadow-lg mb-6 md:mb-0" />
-      <div className="flex-1">
-        <h2 className="text-3xl font-bold text-foreground mb-4">Custom Menus</h2>
-        <p className="text-lg text-muted-foreground mb-4">Every event deserves a menu as unique as its guests. Butterfly Bites cook (Pari) works closely with you to design a culinary experience that reflects your tastes, traditions, and dreams. From elegant plated dinners to rustic family-style feasts, every dish is crafted with artistry and care.</p>
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Spring Feast menu example */}
-          <div className="bg-background rounded-xl shadow p-6 flex flex-col items-center">
-            <span className="text-3xl mb-2">🌸</span>
-            <h3 className="text-xl font-semibold text-primary mb-2">Spring Feast</h3>
-            <ul className="text-muted-foreground text-left mb-2">
-              <li><strong>Starter:</strong> Asparagus & Lemon Risotto</li>
-              <li><strong>Main:</strong> Herb-Crusted Lamb Chops with Spring Vegetables</li>
-              <li><strong>Dessert:</strong> Strawberry Basil Tart</li>
-            </ul>
-            <span className="text-xs text-muted-foreground">Perfect for garden parties and spring celebrations</span>
-          </div>
-          {/* Tuscan Table menu example */}
-          <div className="bg-background rounded-xl shadow p-6 flex flex-col items-center">
-            <span className="text-3xl mb-2">🍋</span>
-            <h3 className="text-xl font-semibold text-primary mb-2">Tuscan Table</h3>
-            <ul className="text-muted-foreground text-left mb-2">
-              <li><strong>Starter:</strong> Burrata with Heirloom Tomatoes & Basil</li>
-              <li><strong>Main:</strong> Handmade Pappardelle with Wild Mushroom Ragu</li>
-              <li><strong>Second:</strong> Porchetta with Rosemary & Garlic</li>
-              <li><strong>Dessert:</strong> Olive Oil Cake with Citrus</li>
-            </ul>
-            <span className="text-xs text-muted-foreground">Inspired by the flavors of Italy’s countryside</span>
-          </div>
-          {/* Harvest Celebration menu example */}
-          <div className="bg-background rounded-xl shadow p-6 flex flex-col items-center">
-            <span className="text-3xl mb-2">🌿</span>
-            <h3 className="text-xl font-semibold text-primary mb-2">Harvest Celebration</h3>
-            <ul className="text-muted-foreground text-left mb-2">
-              <li><strong>Starter:</strong> Roasted Beet Carpaccio with Goat Cheese</li>
-              <li><strong>Main:</strong> Maple-Glazed Duck Breast with Autumn Root Vegetables</li>
-              <li><strong>Dessert:</strong> Spiced Pear Galette</li>
-            </ul>
-            <span className="text-xs text-muted-foreground">A tribute to the bounty of the fall harvest</span>
-          </div>
-        </div>
-        <div className="mt-8 text-center">
-          <p className="text-md text-muted-foreground mb-4">Menus are fully customizable. Vegetarian, vegan, gluten-free, and allergy-friendly options available. Let’s create something unforgettable together!</p>
-          <Link to={route('requestQuote')} className="inline-block px-6 py-3 bg-gradient-to-r from-golden to-sage text-background rounded-full font-semibold shadow hover:scale-105 transition">Request a Quote</Link>
-        </div>
+  <section className="container mx-auto px-4 py-12 max-w-6xl">
+    <div className="bg-card rounded-2xl shadow-xl p-8 md:p-10">
+      <div className="max-w-3xl mx-auto text-center mb-10">
+        <h2 className="text-3xl font-bold text-foreground mb-4">Custom Menu Inspiration</h2>
+        <p className="text-lg text-muted-foreground">
+          These are example directions, not fixed packages. Pari shapes each menu around your occasion, guest needs, and
+          the kind of table you want to share.
+        </p>
       </div>
+      <div className="grid md:grid-cols-3 gap-6">
+        {menuIdeas.map((menu) => (
+          <article key={menu.title} className="bg-background rounded-xl border border-border p-6">
+            <h3 className="text-xl font-semibold text-primary mb-2">{menu.title}</h3>
+            <p className="text-sm text-muted-foreground mb-4">{menu.note}</p>
+            <ul className="space-y-3 text-muted-foreground">
+              {menu.items.map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0"></span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+      <p className="text-center text-muted-foreground mt-8">
+        Vegetarian, vegan, gluten-free, allergy-aware, and mixed cultural menus can be discussed during the request process.
+      </p>
     </div>
   </section>
 );

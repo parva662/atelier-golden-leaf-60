@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
-import Services from "@/components/Services";
-import Contact from "@/components/Contact";
+import BookingCTA from "@/components/BookingCTA";
 import Footer from "@/components/Footer";
 import ClassicItalian from "../../components/PastaMaking/ClassicItalian";
 
@@ -10,8 +9,7 @@ const ClassicItalianPage = () => {
     <div className="min-h-screen">
       <Header />
       <ClassicItalian />
-      <Services />
-      <Contact />
+      <BookingCTA title="Book this pasta workshop" description="Send your preferred date, group size, location, and any dietary needs." />
       <Footer />
     </div>
   );

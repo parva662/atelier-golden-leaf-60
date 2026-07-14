@@ -30,10 +30,10 @@ import FamilyWorkshopPage from "./pages/PastaMaking/FamilyWorkshop";
 import ClassicItalianPage from "./pages/PastaMaking/ClassicItalian";
 import ContactPage from "./pages/Contact";
 import AboutPage from "./pages/About";
+import GalleryPage from "./pages/Gallery";
 import CustomMenusPage from "./pages/Artisanal/CustomMenuPages";
 import LocalSourcingPage from "./pages/Artisanal/LocalSourcing";
 import PersonalServicePage from "./pages/Artisanal/PersonalService";
-import FastPage from "./pages/Artisanal/Fast";
 
 const queryClient = new QueryClient();
 
@@ -51,9 +51,9 @@ const App: React.FC = () => (
             <Route path="/artisanal/custom-menus" element={<CustomMenusPage />} />
             <Route path="/artisanal/local-sourcing" element={<LocalSourcingPage />} />
             <Route path="/artisanal/personal-service" element={<PersonalServicePage />} />
-            <Route path="/artisanal/testpari" element={<FastPage />} />
             <Route path="/pasta-making" element={<PastaMakingPage />} />
             <Route path="/events" element={<EventsPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/pasta-making/classic-italian" element={<ClassicItalianPage />} />
             <Route path="/pasta-making/regional-adventure" element={<RegionalAdventurePage />} />
             <Route path="/pasta-making/family-workshop" element={<FamilyWorkshopPage />} />

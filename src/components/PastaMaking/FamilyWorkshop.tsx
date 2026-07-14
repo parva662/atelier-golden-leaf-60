@@ -21,6 +21,7 @@ import { Link } from "react-router-dom";
 import { route } from "@/lib/routes";
 import PastaClassNav from "@/components/PastaMaking/PastaClassNav";
 import { scrollToTop } from "@/components/PastaMaking/pastaClassNavUtils";
+import catering from "@/assets/catering.jpg";
 
 /**
  * Renders the Family Pasta Workshop class page.
@@ -39,7 +40,7 @@ const FamilyWorkshop = (): JSX.Element => (
     <header className="container mx-auto px-4 max-w-3xl text-center mb-16">
       <h1 className="text-5xl font-extrabold text-foreground mb-6">Family Pasta Workshop</h1>
       <p className="text-xl text-muted-foreground mb-8">A joyful, family-friendly class where kids and adults create pasta together. Kid-safe tools, decorate your own pasta, fun games, trivia, and a family-style meal at the end!</p>
-      <img src="/src/assets/catering.jpg" alt="Family Pasta Workshop" className="rounded-3xl shadow-2xl w-full object-cover max-h-[400px] mx-auto mb-8" />
+      <img src={catering} alt="Family Pasta Workshop" className="rounded-3xl shadow-2xl w-full object-cover max-h-[400px] mx-auto mb-8" />
       {/* Book This Class button navigates to quote request and scrolls to top */}
       <Link to={route('requestQuote')} className="inline-block px-8 py-4 bg-primary text-background font-bold rounded-full shadow hover:bg-sage transition" onClick={scrollToTop}>Book This Class</Link>
     </header>

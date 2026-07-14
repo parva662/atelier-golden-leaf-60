@@ -1,17 +1,14 @@
 import Header from "@/components/Header";
 import Artisanal from "@/components/Artisanal.tsx";
-import Services from "@/components/Services";
-import Contact from "@/components/Contact";
+import BookingCTA from "@/components/BookingCTA";
 import Footer from "@/components/Footer";
 
 const ArtisanalPage = () => {
   return (
     <div className="min-h-screen">
-      vvsdf
       <Header />
       <Artisanal />
-      <Services />
-      <Contact />
+      <BookingCTA title="Planning catering?" description="Share your date, guest count, location, and menu needs so Butterfly Bites can shape the right catering proposal." />
       <Footer />
     </div>
   );

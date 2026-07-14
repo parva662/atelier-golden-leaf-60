@@ -1,5 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import catering from "@/assets/catering.jpg";
+import chefPortrait from "@/assets/chef-portrait.jpg";
+import cookingEvent from "@/assets/cooking-event.jpg";
+import pastaMaking from "@/assets/pasta-making.jpg";
 
 const sampleClasses = [
   {
@@ -11,7 +15,7 @@ const sampleClasses = [
       "Wine pairing tips",
       "Take-home recipes"
     ],
-    image: "/src/assets/pasta-making.jpg"
+    image: pastaMaking
   },
   {
     title: "Regional Pasta Adventure",
@@ -22,7 +26,7 @@ const sampleClasses = [
       "Local ingredient spotlight",
       "Group tasting experience"
     ],
-    image: "/src/assets/cooking-event.jpg"
+    image: cookingEvent
   },
   {
     title: "Family Pasta Workshop",
@@ -33,7 +37,7 @@ const sampleClasses = [
       "Fun games & pasta trivia",
       "Family-style meal at the end"
     ],
-    image: "/src/assets/catering.jpg"
+    image: catering
   }
 ];
 
@@ -41,12 +45,12 @@ const testimonials = [
   {
     name: "Luca & Maria",
     quote: "We never thought we could make pasta like this! Butterfly Bites’s class was the highlight of our trip.",
-    image: "/src/assets/chef-portrait.jpg"
+    image: chefPortrait
   },
   {
     name: "The Patel Family",
     quote: "Our kids loved every minute. The pasta was delicious and the memories will last forever.",
-    image: "/src/assets/pasta-making.jpg"
+    image: pastaMaking
   }
 ];
 
@@ -63,7 +67,7 @@ const PastaMaking = () => {
       <header className="container mx-auto px-4 max-w-3xl text-center mb-16">
         <h1 className="text-5xl font-extrabold text-foreground mb-6">Pasta Making Classes</h1>
         <p className="text-xl text-muted-foreground mb-8">Discover the magic of handmade pasta in Butterfly Bites’s immersive, joy-filled workshops. From flour to feast, every moment is a celebration of tradition, creativity, and connection.</p>
-        <img src="/src/assets/pasta-making.jpg" alt="Fresh handmade pasta" className="rounded-3xl shadow-2xl w-full object-cover max-h-[400px] mx-auto mb-8" />
+        <img src={pastaMaking} alt="Fresh handmade pasta" className="rounded-3xl shadow-2xl w-full object-cover max-h-[400px] mx-auto mb-8" />
         <Link to="/request-quote" className="inline-block px-8 py-4 bg-primary text-background font-bold rounded-full shadow hover:bg-sage transition">Reserve Your Spot</Link>
       </header>
 
@@ -71,17 +75,17 @@ const PastaMaking = () => {
         <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Featured Classes</h2>
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           <Link to="/pasta-making/classic-italian" className="bg-card rounded-3xl shadow-xl p-8 flex flex-col items-center text-center hover:scale-105 transition">
-            <img src="/src/assets/pasta-making.jpg" alt="Classic Italian Pasta Night" className="w-32 h-32 rounded-full object-cover mb-4 shadow-lg" />
+            <img src={pastaMaking} alt="Classic Italian Pasta Night" className="w-32 h-32 rounded-full object-cover mb-4 shadow-lg" />
             <h3 className="text-xl font-semibold text-primary mb-2">Classic Italian Pasta Night</h3>
             <p className="text-muted-foreground mb-4">Learn to make tagliatelle, ravioli, and gnocchi from scratch, paired with traditional sauces.</p>
           </Link>
           <Link to="/pasta-making/regional-adventure" className="bg-card rounded-3xl shadow-xl p-8 flex flex-col items-center text-center hover:scale-105 transition">
-            <img src="/src/assets/cooking-event.jpg" alt="Regional Pasta Adventure" className="w-32 h-32 rounded-full object-cover mb-4 shadow-lg" />
+            <img src={cookingEvent} alt="Regional Pasta Adventure" className="w-32 h-32 rounded-full object-cover mb-4 shadow-lg" />
             <h3 className="text-xl font-semibold text-primary mb-2">Regional Pasta Adventure</h3>
             <p className="text-muted-foreground mb-4">Explore the diversity of Italy’s pasta regions: orecchiette from Puglia, trofie from Liguria, and more.</p>
           </Link>
           <Link to="/pasta-making/family-workshop" className="bg-card rounded-3xl shadow-xl p-8 flex flex-col items-center text-center hover:scale-105 transition">
-            <img src="/src/assets/catering.jpg" alt="Family Pasta Workshop" className="w-32 h-32 rounded-full object-cover mb-4 shadow-lg" />
+            <img src={catering} alt="Family Pasta Workshop" className="w-32 h-32 rounded-full object-cover mb-4 shadow-lg" />
             <h3 className="text-xl font-semibold text-primary mb-2">Family Pasta Workshop</h3>
             <p className="text-muted-foreground mb-4">A joyful, family-friendly class where kids and adults create pasta together.</p>
           </Link>
@@ -120,10 +124,10 @@ const PastaMaking = () => {
       </section>
 
       <footer className="container mx-auto px-4 text-center py-16">
-        <Link to="/request-quote" className="inline-block px-8 py-4 bg-primary text-background font-bold rounded-full shadow hover:bg-sage transition">Reserve Your Spot</Link>
+        <Link to="/request-quote" className="inline-block px-8 py-4 bg-primary text-background font-bold rounded-full shadow hover:bg-sage transition">Request a Workshop Quote</Link>
         <div className="mt-8">
-          <Link to="/about" className="inline-block px-8 py-4 bg-gradient-to-r from-golden to-sage text-background font-bold rounded-full shadow hover:scale-105 transition">
-            Explore My Services
+          <Link to="/gallery" className="inline-block px-8 py-4 bg-gradient-to-r from-golden to-sage text-background font-bold rounded-full shadow hover:scale-105 transition">
+            View Gallery
           </Link>
         </div>
       </footer>
