@@ -4,6 +4,7 @@ import catering from "@/assets/catering.jpg";
 import chefPortrait from "@/assets/chef-portrait.jpg";
 import cookingEvent from "@/assets/cooking-event.jpg";
 import pastaMaking from "@/assets/pasta-making.jpg";
+import pastaMakingGreenTortellini from "@/assets/pasta-making-green-tortellini.png";
 
 const sampleClasses = [
   {
@@ -67,7 +68,7 @@ const PastaMaking = () => {
       <header className="container mx-auto px-4 max-w-3xl text-center mb-16">
         <h1 className="text-5xl font-extrabold text-foreground mb-6">Pasta Making Classes</h1>
         <p className="text-xl text-muted-foreground mb-8">Discover the magic of handmade pasta in Butterfly Bites’s immersive, joy-filled workshops. From flour to feast, every moment is a celebration of tradition, creativity, and connection.</p>
-        <img src={pastaMaking} alt="Fresh handmade pasta" className="rounded-3xl shadow-2xl w-full object-cover max-h-[400px] mx-auto mb-8" />
+        <img src={pastaMakingGreenTortellini} alt="Green handmade stuffed pasta on a wooden table" className="rounded-3xl shadow-2xl w-full object-cover max-h-[400px] mx-auto mb-8" />
         <Link to="/request-quote" className="inline-block px-8 py-4 bg-primary text-background font-bold rounded-full shadow hover:bg-sage transition">Reserve Your Spot</Link>
       </header>
 
